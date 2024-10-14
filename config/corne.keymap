@@ -11,8 +11,8 @@
 
 
 // Home row mods macro
-#define HRML(k1,k2,k3,k4) &ht  &ht LGUI k1 LALT k2  &ht LCTRL k3 &ht LSHIFT k4
-#define HRMR(k1,k2,k3,k4) &ht  &ht LSHIFT k1 &ht RCTRL k2  &ht RALT k3 RGUI k4
+#define HRML(k1,k2,k3,k4) &ht LGUI k1   &ht LALT k2   &ht LCTRL k3 &ht LSHIFT k4
+#define HRMR(k1,k2,k3,k4) &ht LSHIFT k1 &ht RCTRL k2  &ht RALT k3  &ht RGUI k4
 
 /{
     behaviors {
@@ -40,7 +40,7 @@
 
             bindings = <
 &kp PERIOD        &kp SQT         &kp W           &kp F        &kp P             &kp NON_US_BACKSLASH    &kp NUMBER_1  &kp V              &kp U            &kp Y            &kp SLASH        &kp MINUS
-&kp COMMA         HRML(A,R,S,T)                                &kp G             &kp M         HRMR(N,E,I,O)  &kp EQUAL
+&kp COMMA         HRML(A, R ,S ,T)                                &kp G             &kp M         HRMR(N, E, I, O)  &kp EQUAL
 &kp LEFT_BRACKET  &kp B           &kp X           &kp C        &kp D             &kp Q                   &kp Z         &kp H              &kp J            &kp K            &kp L            &kp RIGHT_BRACKET
                                                   &lt 3 TAB    &lt 2 SPACE       &lt 1 ESCAPE            &lt 3 ENTER   &lt 2 BACKSPACE    &lt 1 SEMICOLON
             >;
