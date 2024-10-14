@@ -9,11 +9,25 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
 
-&mt {
-    tapping-term-ms = <300>;
-};
 
-/ {
+// Home row mods macro
+#define HRML(k1,k2,k3,k4) &ht  &ht LGUI k1 LALT k2  &ht LCTRL k3 &ht LSHIFT k4
+#define HRMR(k1,k2,k3,k4) &ht  &ht LSHIFT k1 &ht RCTRL k2  &ht RALT k3 RGUI k4
+
+/{
+    behaviors {
+        ht: hold_tap {
+            label = "hold_tap";
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <220>;
+            quick-tap-ms = <150>;
+            global-quick-tap;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -26,7 +40,7 @@
 
             bindings = <
 &kp PERIOD        &kp SQT         &kp W           &kp F        &kp P             &kp NON_US_BACKSLASH    &kp NUMBER_1  &kp V              &kp U            &kp Y            &kp SLASH        &kp MINUS
-&kp COMMA         &mt LEFT_WIN A  &kp R           &mt LCTRL S  &mt LEFT_SHIFT T  &kp G                   &kp M         &mt RIGHT_SHIFT N  &mt RCTRL E      &mt RIGHT_ALT I  &mt RIGHT_WIN O  &kp EQUAL
+&kp COMMA         HRML(A,R,S,T)                                &kp G             &kp M         HRMR(N,E,I,O)  &kp EQUAL
 &kp LEFT_BRACKET  &kp B           &kp X           &kp C        &kp D             &kp Q                   &kp Z         &kp H              &kp J            &kp K            &kp L            &kp RIGHT_BRACKET
                                                   &lt 3 TAB    &lt 2 SPACE       &lt 1 ESCAPE            &lt 3 ENTER   &lt 2 BACKSPACE    &lt 1 SEMICOLON
             >;
@@ -65,7 +79,7 @@
         layer_3 {
             bindings = <
 &trans  &trans         &trans         &trans          &trans    &bt BT_CLR_ALL    &trans  &trans    &trans         &trans          &trans      &trans
-&trans  &kp LS(LC(V))  &kp LC(LS(C))  &kp LEFT_SHIFT  &kp HOME  &trans            &trans  &kp LEFT  &kp UP_ARROW   &kp DOWN_ARROW  &kp RIGHT   &trans
+&trans  &kp LS(LC(V))  &kp LC(LS(C))  &kp LEFT_SHIFT  &kp HOME  &trans            &trans  &kp LEFT  &kp DOWN_ARROW   &kp UP_ARROW  &kp RIGHT   &trans
 &trans  &trans         &trans         &trans          &kp END   &trans            &trans  &trans    &kp PAGE_DOWN  &kp PG_UP       &kp DELETE  &trans
                                       &trans          &trans    &trans            &trans  &trans    &trans
             >;
