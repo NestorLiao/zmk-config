@@ -261,8 +261,7 @@
             = <&macro_press &kp LCTRL>   // Press Ctrl
             , <&macro_tap &kp N>         // Tap 'x' while Ctrl is held
             , <&macro_release &kp LCTRL> // Release Ctrl
-            , <&macro_tap &kp N2>         // Tap 'k' while Ctrl is held
-            , <&macro_tap &kp RET>;      // Tap 'Enter' while Ctrl is held
+            , <&macro_tap &kp N2>;         // Tap 'k' while Ctrl is held
     };
 
 
@@ -273,8 +272,7 @@
             = <&macro_press &kp LCTRL>   // Press Ctrl
             , <&macro_tap &kp N>         // Tap 'x' while Ctrl is held
             , <&macro_release &kp LCTRL> // Release Ctrl
-            , <&macro_tap &kp N1>         // Tap 'k' while Ctrl is held
-            , <&macro_tap &kp RET>;      // Tap 'Enter' while Ctrl is held
+            , <&macro_tap &kp N1>;         // Tap 'k' while Ctrl is held
     };
 
 
@@ -447,7 +445,9 @@
                                   &lt MEDIA ESC  &lt NAV SPACE  &lt MOUSE TAB  &lt SYM RET  &lt NUM BSPC  &lt FUN DEL
             >;
         };
-// copy/down/up/fullscreen/toggle/ cduftabr cduftab 
+
+
+// copy/down/up/fullscreen/toggle/ cduftabr 
         Nav {
             bindings = <
                 &none   &none        &none        &none        &none        &none        &kp K_REDO    &kp K_CUT   &kp K_COPY    &kp K_PASTE    &kp K_UNDO  &none
