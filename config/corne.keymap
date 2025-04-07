@@ -4,8 +4,8 @@
 #include <dt-bindings/zmk/pointing.h>
 
 
-//#define ZMK_POINTING_DEFAULT_MOVE_VAL 450  // default: 600
-//#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 450  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 25   // default: 10
 
 // Layer Definition
 #define BASE   0
@@ -325,7 +325,16 @@
             , <&macro_tap &kp N1>;         // Tap 'k' while Ctrl is held
     };
 
-
+    emacs_c_x_0: emacs_c_x_0 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LCTRL>   // Press Ctrl
+            , <&macro_tap &kp N>         // Tap 'x' while Ctrl is held
+            , <&macro_release &kp LCTRL> // Release Ctrl
+            , <&macro_tap &kp N0>;         // Tap 'k' while Ctrl is held
+    };
+    
     emacs_c_x_k: emacs_c_x_k {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
@@ -503,7 +512,7 @@
                 &none   &none        &emacs_c_x_7        &emacs_c_x_8        &emacs_c_x_9        &none        &kp K_REDO    &kp K_CUT   &kp K_COPY    &kp K_PASTE    &kp K_UNDO  &none
                 &none   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT   &s_r        &none         &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &none
                 &none   &none        &emacs_c_x_1        &emacs_c_x_2        &s_c        &s_tab        &kp INSERT    &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &none
-                                    &trans       &trans       &trans       &s_u       &s_d       &trans
+                                    &trans       &trans       &trans       &s_u       &s_d       &s_q
             >;
         };
 
@@ -521,7 +530,7 @@
                 &none   &emacs_c_c_g_m    &emacs_c_x_c_w  &explain_chinese  &emacs_c_x_p     &emacs_c_x_c_b     &none       &none         &mkp MB4       &mkp MB5      &none      &none
                 &none   &emacs_c_x_c_sm   &emacs_c_g      &emacs_c_x_c_f    &emacs_c_x_b     &emacs_c_x_g         &emacs_c_x_m       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
                 &none   &emacs_c_c_c_dt   &emacs_m_n_1    &emacs_c_x_p_c    &emacs_c_x_d     &emacs_c_x_p_s         &emacs_c_x_k &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-                                            &trans     &s_q     &trans      &mkp RCLK   &mkp LCLK   &mkp MCLK
+                                            &trans     &emacs_c_x_0     &trans      &mkp RCLK   &mkp LCLK   &mkp MCLK
             >;
         };
 
