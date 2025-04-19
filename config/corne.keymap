@@ -509,6 +509,70 @@ s_m: s_m {
         ;
 };
 
+s_i: s_i {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp RGUI>,
+        <&macro_tap &kp I>,
+        <&macro_release &kp RGUI>;
+};
+
+s_a: s_a {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp RGUI>,
+        <&macro_tap &kp A>,
+        <&macro_release &kp RGUI>;
+};
+
+s_b: s_b {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp RGUI>,
+        <&macro_tap &kp B>,
+        <&macro_release &kp RGUI>;
+};
+
+s_s: s_s {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp RGUI>,
+        <&macro_tap &kp S>,
+        <&macro_release &kp RGUI>;
+};
+
+s_g: s_g {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp RGUI>,
+        <&macro_tap &kp G>,
+        <&macro_release &kp RGUI>;
+};
+
+s_t: s_t {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp RGUI>,
+        <&macro_tap &kp T>,
+        <&macro_release &kp RGUI>;
+};
+
+s_v: s_v {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = 
+        <&macro_press &kp RGUI>,
+        <&macro_tap &kp V>,
+        <&macro_release &kp RGUI>;
+};
+
+
 s_k: s_k {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
@@ -675,7 +739,7 @@ s_x: s_x {
 
         Mouse {
             bindings = <
-                &none   &emacs_c_c_g_m    &emacs_c_x_c_a  &explain_chinese  &emacs_c_x_p     &emacs_c_x_c_b     &emacs_c_x_j       &emacs_c_x_l         &mkp MB4       &mkp MB5      &none      &none
+                &none   &emacs_c_c_g_m    &emacs_c_x_c_a  &explain_chinese  &emacs_c_x_p     &emacs_c_x_c_b     &emacs_c_x_j       &emacs_c_x_l         &mkp MB4       &mkp MB5      &s_v      &none
                 &none   &emacs_c_x_c_sm   &emacs_c_g      &emacs_c_x_c_f    &emacs_c_x_b     &emacs_c_x_g         &emacs_c_x_m       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
                 &none   &emacs_c_c_c_dt   &emacs_m_n_1    &emacs_c_x_p_c    &emacs_c_x_d     &emacs_c_x_p_s         &emacs_c_x_k &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                                             &trans     &emacs_c_x_0     &trans      &mkp RCLK   &mkp LCLK   &mkp MCLK
@@ -684,9 +748,9 @@ s_x: s_x {
 
         Symbols {
             bindings = <
-                &none   &kp LBRC      &kp AMPS     &kp ASTRK   &kp LPAR     &kp RBRC     &none       &none       &none       &none       &none       &none
-                &none   &kp COLON     &kp DLLR     &kp PRCNT   &kp CARET    &kp PLUS     &none       &kp RSHIFT  &kp RCTRL   &kp RALT    &kp RGUI    &none
-                &none   &kp TILDE     &kp EXCL     &kp AT      &kp HASH     &kp PIPE     &none       &id      &qq      &email &phone  &none
+                &none   &kp LBRC      &kp AMPS     &kp ASTRK   &kp LPAR     &kp RBRC     &s_i       &s_f       &s_a       &s_b       &s_s       &none
+                &none   &kp COLON     &kp DLLR     &kp PRCNT   &kp CARET    &kp PLUS     &s_g       &kp RSHIFT  &kp RCTRL   &kp RALT    &kp RGUI    &none
+                &none   &kp TILDE     &kp EXCL     &kp AT      &kp HASH     &kp PIPE     &s_t       &id      &qq      &email &phone  &none
                                         &kp LPAR     &kp RPAR    &kp UNDER   &trans      &trans      &trans
             >;
         };
