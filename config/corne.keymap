@@ -155,26 +155,6 @@
         };
 
 
-         s_y: s_y {
-           compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-               = <&macro_press &kp RGUI>   // Press Ctrl
-                , <&macro_tap &kp Y>         // Tap 'g' while Ctrl is held
-                , <&macro_release &kp RGUI> // Release Ctrl
-                ;
-        };
-
-         s_o: s_o {
-           compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-               = <&macro_press &kp RGUI>   // Press Ctrl
-                , <&macro_tap &kp O>         // Tap 'g' while Ctrl is held
-                , <&macro_release &kp RGUI> // Release Ctrl
-                ;
-        };
-
 
          s_f: s_f {
            compatible = "zmk,behavior-macro";
