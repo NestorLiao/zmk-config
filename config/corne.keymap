@@ -463,9 +463,9 @@ s_o: s_o {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp O>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp O>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -473,9 +473,9 @@ s_y: s_y {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp Y>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp Y>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -483,9 +483,9 @@ s_l: s_l {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp L>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp L>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -493,9 +493,9 @@ s_j: s_j {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp J>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp J>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -503,9 +503,9 @@ s_m: s_m {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp M>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp M>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -513,9 +513,9 @@ s_k: s_k {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp K>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp K>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -523,9 +523,9 @@ s_h: s_h {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp H>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp H>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -533,9 +533,9 @@ s_w: s_w {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp W>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp W>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -543,9 +543,9 @@ s_n: s_n {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp N>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp N>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
@@ -553,9 +553,9 @@ s_x: s_x {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings
-        = <&mo_press &kp RGUI>
-        , <&mo_tap &kp X>
-        , <&mo_release &kp RGUI>
+        = <&marcro_press &kp RGUI>
+        , <&marcro_tap &kp X>
+        , <&marcro_release &kp RGUI>
         ;
 };
 
