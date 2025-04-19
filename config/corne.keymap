@@ -118,7 +118,7 @@
             #binding-cells = <0>;
             bindings
                = <&macro_press &kp RGUI>   // Press Ctrl
-                , <&macro_tap &kp C>         // Tap 'g' while Ctrl is held
+                , <&macro_tap &kp C>         // Tap 'c' while Ctrl is held
                 , <&macro_release &kp RGUI> // Release Ctrl
                 ;
         };
@@ -153,6 +153,28 @@
                 , <&macro_release &kp RGUI> // Release Ctrl
                 ;
         };
+
+
+         s_y: s_y {
+           compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+               = <&macro_press &kp RGUI>   // Press Ctrl
+                , <&macro_tap &kp Y>         // Tap 'g' while Ctrl is held
+                , <&macro_release &kp RGUI> // Release Ctrl
+                ;
+        };
+
+         s_o: s_o {
+           compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+               = <&macro_press &kp RGUI>   // Press Ctrl
+                , <&macro_tap &kp O>         // Tap 'g' while Ctrl is held
+                , <&macro_release &kp RGUI> // Release Ctrl
+                ;
+        };
+
 
          s_f: s_f {
            compatible = "zmk,behavior-macro";
@@ -240,13 +262,13 @@
             , <&macro_tap &kp D>;        // Tap 'd' while Ctrl is held
     };
 
-    emacs_c_x_c_w: emacs_c_x_c_w {
+    emacs_c_x_c_a: emacs_c_x_c_a {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
             = <&macro_press &kp LCTRL>   // Press Ctrl
             , <&macro_tap &kp N>         // Tap 'x' while Ctrl is held
-            , <&macro_tap &kp W>     // Tap 'space' while Ctrl is held
+            , <&macro_tap &kp A>     // Tap 'space' while Ctrl is held
             , <&macro_release &kp LCTRL>; // Release Ctrl
     };
 
@@ -274,6 +296,29 @@
             , <&macro_release &kp LCTRL>; // Release Ctrl
     };
 
+
+    emacs_c_x_j: emacs_c_x_j {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LCTRL>   // Press Ctrl
+            , <&macro_tap &kp N>         // Tap 'x' while Ctrl is held
+            , <&macro_release &kp LCTRL> // Release Ctrl
+            , <&macro_tap &kp J>;         // Tap 'k' while Ctrl is held
+    };
+
+
+    emacs_c_x_l: emacs_c_x_l {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LCTRL>   // Press Ctrl
+            , <&macro_tap &kp N>         // Tap 'x' while Ctrl is held
+            , <&macro_release &kp LCTRL> // Release Ctrl
+            , <&macro_tap &kp L>;         // Tap 'k' while Ctrl is held
+    };
+
+
     emacs_c_x_9: emacs_c_x_9 {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
@@ -283,6 +328,29 @@
             , <&macro_release &kp LCTRL> // Release Ctrl
             , <&macro_tap &kp N9>;         // Tap 'k' while Ctrl is held
     };
+
+
+    emacs_c_c_7: emacs_c_c_7 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LCTRL>   // Press Ctrl
+            , <&macro_tap &kp C>         // Tap 'c' while Ctrl is held
+            , <&macro_release &kp LCTRL> // Release Ctrl
+            , <&macro_tap &kp N7>;         // Tap 'k' while Ctrl is held
+    };
+
+
+    emacs_c_c_8: emacs_c_c_8 {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LCTRL>   // Press Ctrl
+            , <&macro_tap &kp C>         // Tap 'c' while Ctrl is held
+            , <&macro_release &kp LCTRL> // Release Ctrl
+            , <&macro_tap &kp N8>;         // Tap 'k' while Ctrl is held
+    };
+
 
     emacs_c_x_8: emacs_c_x_8 {
         compatible = "zmk,behavior-macro";
@@ -411,6 +479,105 @@
             , <&macro_tap &kp M>;         // Tap 'c' again while Ctrl is held
     };
 
+s_o: s_o {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp O>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_y: s_y {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp Y>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_l: s_l {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp L>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_j: s_j {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp J>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_m: s_m {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp M>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_k: s_k {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp K>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_h: s_h {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp H>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_w: s_w {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp W>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_n: s_n {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp N>
+        , <&mo_release &kp RGUI>
+        ;
+};
+
+s_x: s_x {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&mo_press &kp RGUI>
+        , <&mo_tap &kp X>
+        , <&mo_release &kp RGUI>
+        ;
+};
 
     emacs_c_x_p_c: emacs_c_x_p_c {
         compatible = "zmk,behavior-macro";
@@ -448,6 +615,7 @@
         bindings
             = <&macro_tap &kp N2 &kp N7 &kp N3 &kp N0 &kp N6 &kp N4 &kp N7 &kp N0 &kp N5 &kp N2>;
     };
+
 
     id: id_macro {
         compatible = "zmk,behavior-macro";
@@ -509,25 +677,25 @@
 // copy/down/up/fullscreen/toggle/ cduftabr 
         Nav {
             bindings = <
-                &none   &none        &emacs_c_x_7        &emacs_c_x_8        &emacs_c_x_9        &none        &kp K_REDO    &kp K_CUT   &kp K_COPY    &kp K_PASTE    &kp K_UNDO  &none
-                &none   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT   &s_r        &none         &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &none
-                &none   &none        &emacs_c_x_1        &emacs_c_x_2        &s_c        &s_tab        &kp INSERT    &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &none
+                &none   &emacs_c_c_7        &emacs_c_x_7        &emacs_c_x_8        &emacs_c_x_9        &s_j        &kp K_REDO    &kp K_CUT   &kp K_COPY    &kp K_PASTE    &kp K_UNDO  &none
+                &none   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT   &s_r        &s_m         &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &none
+                &none   &emacs_c_c_8        &emacs_c_x_1        &emacs_c_x_2        &s_c        &s_tab        &kp INSERT    &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &none
                                     &trans       &trans       &trans       &s_u       &s_d       &s_q
             >;
         };
 
         Numbers {
             bindings = <
-                &none   &kp LBKT      &kp N7      &kp N8      &kp N9      &kp RBKT     &none       &s_z      &emacs_c_x_o      &emacs_c_x_x_t      &none      &none
-                &none   &kp SEMI      &kp N4      &kp N5      &kp N6      &kp EQUAL    &none       &kp RSHIFT &kp RCTRL  &kp RALT   &kp RGUI   &none
-                &none   &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp BSLH     &id         &s_f       &qq      &email &phone  &none
+                &none   &kp LBKT      &kp N7      &kp N8      &kp N9      &kp RBKT     &s_o       &s_z      &emacs_c_x_o      &emacs_c_x_x_t      &s_y      &none
+                &none   &kp SEMI      &kp N4      &kp N5      &kp N6      &kp EQUAL    &s_l       &kp RSHIFT &kp RCTRL  &kp RALT   &kp RGUI   &none
+                &none   &kp GRAVE     &kp N1      &kp N2      &kp N3      &kp BSLH     &s_k         &s_h       &s_w       &s_n       &s_x       &none
                                         &kp DOT    &kp N0      &kp MINUS   &trans      &trans      &trans
             >;
         };
 
         Mouse {
             bindings = <
-                &none   &emacs_c_c_g_m    &emacs_c_x_c_w  &explain_chinese  &emacs_c_x_p     &emacs_c_x_c_b     &none       &none         &mkp MB4       &mkp MB5      &none      &none
+                &none   &emacs_c_c_g_m    &emacs_c_x_c_a  &explain_chinese  &emacs_c_x_p     &emacs_c_x_c_b     &emacs_c_x_j       &emacs_c_x_l         &mkp MB4       &mkp MB5      &none      &none
                 &none   &emacs_c_x_c_sm   &emacs_c_g      &emacs_c_x_c_f    &emacs_c_x_b     &emacs_c_x_g         &emacs_c_x_m       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &none
                 &none   &emacs_c_c_c_dt   &emacs_m_n_1    &emacs_c_x_p_c    &emacs_c_x_d     &emacs_c_x_p_s         &emacs_c_x_k &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
                                             &trans     &emacs_c_x_0     &trans      &mkp RCLK   &mkp LCLK   &mkp MCLK
@@ -538,16 +706,16 @@
             bindings = <
                 &none   &kp LBRC      &kp AMPS     &kp ASTRK   &kp LPAR     &kp RBRC     &none       &none       &none       &none       &none       &none
                 &none   &kp COLON     &kp DLLR     &kp PRCNT   &kp CARET    &kp PLUS     &none       &kp RSHIFT  &kp RCTRL   &kp RALT    &kp RGUI    &none
-                &none   &kp TILDE     &kp EXCL     &kp AT      &kp HASH     &kp PIPE     &none       &none       &none       &none       &none       &none
+                &none   &kp TILDE     &kp EXCL     &kp AT      &kp HASH     &kp PIPE     &none       &id      &qq      &email &phone  &none
                                         &kp LPAR     &kp RPAR    &kp UNDER   &trans      &trans      &trans
             >;
         };
 
         Function {
             bindings = <
-                &none   &kp F12      &kp F7      &kp F8      &kp F9      &kp PRINTSCREEN  &kp 18     &kp F19      &kp F20      &kp F21      &none      &none
-                &none   &kp F11      &kp F4      &kp F5      &kp F6      &kp SCROLLLOCK   &kp 17      &kp RSHIFT  &kp RCTRL   &kp RALT    &kp RGUI      &none
-                &none   &kp F10      &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK  &kp 16       &kp F13      &kp F14      &kp F15      &none      &none
+                &none   &kp F12      &kp F7      &kp F8      &kp F9      &kp PRINTSCREEN  &kp F18     &kp F19      &kp F20      &kp F21      &none      &none
+                &none   &kp F11      &kp F4      &kp F5      &kp F6      &kp SCROLLLOCK   &kp F17      &kp RSHIFT  &kp RCTRL   &kp RALT    &kp RGUI      &none
+                &none   &kp F10      &kp F1      &kp F2      &kp F3      &kp PAUSE_BREAK  &kp F16       &kp F13      &kp F14      &kp F15      &none      &none
                                          &trans   &trans   &trans      &trans          &trans      &trans
             >;
         };
