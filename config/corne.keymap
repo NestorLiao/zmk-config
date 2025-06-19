@@ -123,6 +123,32 @@
                 ;
         };
 
+         s_a_l: s_a_l {
+           compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+               = <&macro_press &kp RGUI>   // Press Ctrl
+                = <&macro_press &kp RALT>   // Press Alt
+
+                , <&macro_tap &kp L>         // Tap 'c' while Ctrl is held
+                , <&macro_release &kp RGUI> // Release Ctrl
+                , <&macro_release &kp RALT> // Release Ctrl
+                ;
+        };
+
+         s_a_r: s_a_r {
+           compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+               = <&macro_press &kp RGUI>   // Press Ctrl
+                = <&macro_press &kp RALT>   // Press Alt
+
+                , <&macro_tap &kp R>         // Tap 'c' while Ctrl is held
+                , <&macro_release &kp RGUI> // Release Ctrl
+                , <&macro_release &kp RALT> // Release Ctrl
+                ;
+        };
+
          s_u: s_u {
            compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -724,7 +750,7 @@ s_x: s_x {
                 &none   &emacs_c_c_7        &emacs_c_x_7        &emacs_c_x_8        &emacs_c_x_9        &s_j        &kp K_REDO    &kp K_CUT   &kp K_COPY    &kp K_PASTE    &kp K_UNDO  &none
                 &none   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT   &s_r        &s_m         &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &none
                 &none   &emacs_c_c_8        &emacs_c_x_1        &emacs_c_x_2        &s_c        &s_tab        &kp INSERT    &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &none
-                                    &trans       &trans       &trans       &s_u       &s_d       &s_q
+                                    &s_a_l       &trans       &s_a_r       &s_u       &s_d       &s_q
             >;
         };
 
