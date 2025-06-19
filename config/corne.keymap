@@ -128,7 +128,7 @@
             #binding-cells = <0>;
             bindings
                = <&macro_press &kp RGUI>   // Press Ctrl
-                = <&macro_press &kp RALT>   // Press Alt
+               , <&macro_press &kp RALT>   // Press Alt
 
                 , <&macro_tap &kp L>         // Tap 'c' while Ctrl is held
                 , <&macro_release &kp RGUI> // Release Ctrl
@@ -141,7 +141,7 @@
             #binding-cells = <0>;
             bindings
                = <&macro_press &kp RGUI>   // Press Ctrl
-                = <&macro_press &kp RALT>   // Press Alt
+               , <&macro_press &kp RALT>   // Press Alt
 
                 , <&macro_tap &kp R>         // Tap 'c' while Ctrl is held
                 , <&macro_release &kp RGUI> // Release Ctrl
