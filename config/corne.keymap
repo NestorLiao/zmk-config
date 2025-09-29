@@ -49,9 +49,7 @@
         /* q  -> C-M-@  (Ctrl + Meta + @) */
         bindings = <
             &macro_press   &kp LCTRL
-          , &macro_press   &kp LALT
-          , &macro_tap     &kp AT
-          , &macro_release &kp LALT
+          , &macro_tap     &kp LA(AT)
           , &macro_release &kp LCTRL
         >;
     };
@@ -73,9 +71,7 @@
         /* f -> C-M-h (Ctrl + Meta + h) */
         bindings = <
             &macro_press   &kp LCTRL
-          , &macro_press   &kp LALT
-          , &macro_tap     &kp H
-          , &macro_release &kp LALT
+          , &macro_tap     &kp LA(H)
           , &macro_release &kp LCTRL
         >;
     };
