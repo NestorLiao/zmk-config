@@ -52,6 +52,13 @@
           , <&macro_release &kp LCTRL>;
     };
 
+    navw: navw {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        /* w -> M-@ (Meta + @) */
+        bindings = <&macro_tap     &kp LA(AT)>;
+    };
+
     /* f -> C-M-h (Ctrl + Meta + h) */
     navf: navf {
         compatible = "zmk,behavior-macro";
