@@ -47,22 +47,19 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         /* q  -> C-M-@  (Ctrl + Meta + @) */
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp LA(AT)
-          , &macro_release &kp LCTRL
-        >;
+        bindings
+        = <&macro_press   &kp LCTRL>
+          , <&macro_tap     &kp LA(AT)>
+          , <&macro_release &kp LCTRL>;
     };
 
     navw: navw {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         /* w -> M-@ (Meta + @) */
-        bindings = <
-            &macro_press   &kp LALT
-          , &macro_tap     &kp AT
-          , &macro_release &kp LALT
-        >;
+        bindings = <&macro_press   &kp LALT>
+          , <&macro_tap     &kp AT>
+          , <&macro_release &kp LALT>;
     };
 
     navf: navf {
