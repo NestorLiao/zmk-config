@@ -42,731 +42,361 @@
 
 
     macros {
-
+    /* q  -> C-M-@  (Ctrl + Meta + @) */
     navq: navq {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* q  -> C-M-@  (Ctrl + Meta + @) */
         bindings
         = <&macro_press   &kp LCTRL>
           , <&macro_tap     &kp LA(AT)>
           , <&macro_release &kp LCTRL>;
     };
 
-    navw: navw {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        /* w -> M-@ (Meta + @) */
-        bindings = <&macro_press   &kp LALT>
-          , <&macro_tap     &kp AT>
-          , <&macro_release &kp LALT>;
-    };
-
+    /* f -> C-M-h (Ctrl + Meta + h) */
     navf: navf {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* f -> C-M-h (Ctrl + Meta + h) */
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp LA(H)
-          , &macro_release &kp LCTRL
-        >;
+        bindings
+        = <&macro_press   &kp LCTRL>
+          , <&macro_tap     &kp LA(H)>
+          , <&macro_release &kp LCTRL>;
     };
 
+    /* p -> C-x h  (Ctrl+x then h) */
     navp: navp {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* p -> C-x h  (Ctrl+x then h) */
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_tap     &kp H
-          , &macro_release &kp LCTRL
-        >;
+        bindings
+        = <&macro_tap     &kp LC(X)>
+          , <&macro_tap     &kp H>;
     };
 
-
+    /* b -> C-c, C-~, then B */
     navb: navb {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            /* C-c */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-            /* C-~ */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp TILDE
-          , &macro_release &kp LCTRL
-
-            /* plain g */
-          , &macro_tap     &kp B
-        >;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp B>;
     };
 
     /* redo = Ctrl+Shift+Z */
     nav_redo: nav_redo {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp Z
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LCTRL
-        >;
+        bindings
+        = <&macro_press   &kp LCTRL>
+          , <&macro_tap     &kp LS(Z)>
+          , <&macro_release &kp LCTRL>;
     };
 
-    /* cut / copy / paste / undo (common Ctrl+X/C/V/Z) */
-
-    /* g: C-c, C-~, then g (two Ctrl combos then plain g) */
+    /* g: C-c, C-~, then g */
     navg: navg {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            /* C-c */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-            /* C-~ */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp TILDE
-          , &macro_release &kp LCTRL
-
-            /* plain g */
-          , &macro_tap     &kp G
-        >;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp G>;
     };
 
     /* m: C-c, C-~, then m */
     navm: navm {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp TILDE
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp M
-        >;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp M>;
     };
 
-    /* z/x/c/d -> sequences C-x 0 / C-x 1 / C-x 2 / C-x o */
+    /* z -> C-x 0 */
     navz: navz {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-          , &macro_tap     &kp 0
-        >;
+        bindings
+        = <&macro_tap     &kp LC(X)>
+          , <&macro_tap     &kp 0>;
     };
 
+    /* x -> C-x 1 */
     navx: navx {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-          , &macro_tap     &kp 1
-        >;
+        bindings
+        = <&macro_tap     &kp LC(X)>
+          , <&macro_tap     &kp 1>;
     };
 
+    /* c -> C-x 2 */
     navc: navc {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-          , &macro_tap     &kp 2
-        >;
+        bindings
+        = <&macro_tap     &kp LC(X)>
+          , <&macro_tap     &kp 2>;
     };
 
+    /* d -> C-x o */
     navd: navd {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-          , &macro_tap     &kp O
-        >;
+        bindings
+        = <&macro_tap     &kp LC(X)>
+          , <&macro_tap     &kp O>;
     };
 
     /* v: C-c, C-~, then v */
     navv: navv {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp TILDE
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp V
-        >;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp V>;
     };
 
     /* enter -> M-g p   (Meta+g then p) */
     nav_enter: nav_enter {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LALT
-          , &macro_tap     &kp G
-          , &macro_release &kp LALT
-          , &macro_tap     &kp P
-        >;
+        bindings
+        = <&macro_tap     &kp LA(G)>
+          , <&macro_tap     &kp P>;
     };
 
     /* delete -> M-g n   (Meta+g then n) */
     nav_delete: nav_delete {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LALT
-          , &macro_tap     &kp G
-          , &macro_release &kp LALT
-          , &macro_tap     &kp N
-        >;
+        bindings
+        = <&macro_tap     &kp LA(G)>
+          , <&macro_tap     &kp N>;
     };
 
-    /* Super + Shift + J */
-    numj: numj {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp J
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    /* Super + Shift + L */
-    numl: numl {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp L
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    /* Super + Shift + U */
-    numu: numu {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp U
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    /* Super + Shift + Y */
-    numy: numy {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp Y
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-   numm: numm {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp M
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-    numk: numk {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp K
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-    numh: numh {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp H
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    /* Super + Shift + COMMA (,) */
-    num_comma: num_comma {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp COMMA
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    /* Super + Shift + DOT (.) */
-    num_dot: num_dot {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp DOT
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    /* Super + Shift + FSLH (/) */
-    num_fslh: num_fslh {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp FSLH
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    /* Super + Shift + SQT (') */
-    num_sqt: num_sqt {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LGUI
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp SQT
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LGUI
-        >;
-    };
-
-    mosq: mosq {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-c */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-            /* C-; (SEMI) */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-            /* final q */
-          , &macro_tap     &kp Q
-        >;
-    };
-
-    mosw: mosw {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp W
-        >;
-    };
-
-    mosf: mosf {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp F
-        >;
-    };
-
-    mosp: mosp {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp P
-        >;
-    };
-
-    /* ------------------------
-       b : C-x then C-b
-       ------------------------ */
-
-    mosb: mosb {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-            /* C-b */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp B
-          , &macro_release &kp LCTRL
-        >;
-    };
-
-    /* ------------------------
-       second group: j/l/u/y/'  -> C-c C-; <key>
-       ------------------------ */
-
-    mosj: mosj {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp J
-        >;
-    };
-
-    mosl: mosl {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp L
-        >;
-    };
-
-    mosu: mosu {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp U
-        >;
-    };
-
-    mosy: mosy {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp Y
-        >;
-    };
-
-    mos_sqt: mos_sqt {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp SQT
-        >;
-    };
-
-    /* ------------------------
-       a/r/s/t/g/m group
-       a: C-x then C-;   (no extra final)
-       r: C-g
-       s: C-x then C-f
-       t: C-x then b
-       g: C-x then g
-       m: C-c, C-;, m
-       ------------------------ */
-
-    mosa: mosa {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-            /* C-; */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-        >;
-    };
-
-    mosr: mosr {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-g */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp G
-          , &macro_release &kp LCTRL
-        >;
-    };
-
-    moss: moss {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-            /* C-f */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp F
-          , &macro_release &kp LCTRL
-        >;
-    };
-
-    most: most {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x then B */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp B
-        >;
-    };
-
-    mosg: mosg {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x then G */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp G
-        >;
-    };
-
-    mosm: mosm {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-c */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-            /* C-; */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-            /* final m */
-          , &macro_tap     &kp M
-        >;
-    };
-
-    /* ------------------------
-       z/x/c/d/v/k group and special space
-       z: M-s then DOT
-       x: C-M-%  -> Ctrl + Alt + Shift + 5
-       c: C-c, C-;, c
-       d: C-x d
-       v: C-c, C-;, v
-       k: C-x k
-       space: C-x then TAB
-       ------------------------ */
-
-    mosz: mosz {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* M-s */
-            &macro_press   &kp LALT
-          , &macro_tap     &kp S
-          , &macro_release &kp LALT
-
-            /* then . */
-          , &macro_tap     &kp DOT
-        >;
-    };
-
-    mosx: mosx {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C + M + Shift + 5  => gives Ctrl+Alt+% */
-            &macro_press   &kp LCTRL
-          , &macro_press   &kp LALT
-          , &macro_press   &kp LSHIFT
-          , &macro_tap     &kp 5
-          , &macro_release &kp LSHIFT
-          , &macro_release &kp LALT
-          , &macro_release &kp LCTRL
-        >;
-    };
-
-    mosc: mosc {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-c */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-            /* C-; */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-            /* final c */
-          , &macro_tap     &kp C
-        >;
-    };
-
-    mosd: mosd {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x then D */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp D
-        >;
-    };
-
-    mosv: mosv {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-c */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp C
-          , &macro_release &kp LCTRL
-
-            /* C-; */
-          , &macro_press   &kp LCTRL
-          , &macro_tap     &kp SEMI
-          , &macro_release &kp LCTRL
-
-            /* final v */
-          , &macro_tap     &kp V
-        >;
-    };
-
-    mosk: mosk {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x then K */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-          , &macro_tap     &kp K
-        >;
-    };
-
-    mos_space: mos_space {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings = <
-            /* C-x */
-            &macro_press   &kp LCTRL
-          , &macro_tap     &kp X
-          , &macro_release &kp LCTRL
-
-            /* then TAB */
-          , &macro_tap     &kp TAB
-        >;
-    };
+ /* Super + Shift + J */
+numj: numj {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(J))>;
+};
+
+/* Super + Shift + L */
+numl: numl {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(L))>;
+};
+
+/* Super + Shift + U */
+numu: numu {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(U))>;
+};
+
+/* Super + Shift + Y */
+numy: numy {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(Y))>;
+};
+
+/* Super + Shift + M */
+numm: numm {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(M))>;
+};
+
+/* Super + Shift + K */
+numk: numk {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(K))>;
+};
+
+/* Super + Shift + H */
+numh: numh {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(H))>;
+};
+
+/* Super + Shift + COMMA (,) */
+num_comma: num_comma {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(COMMA))>;
+};
+
+/* Super + Shift + DOT (.) */
+num_dot: num_dot {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(DOT))>;
+};
+
+/* Super + Shift + FSLH (/) */
+num_fslh: num_fslh {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(FSLH))>;
+};
+
+/* Super + Shift + SQT (') */
+num_sqt: num_sqt {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap   &kp LG(LS(SQT))>;
+};
+
+/* -------------------------
+   mos* macros (C-c, C-; , <key>)
+   Use SEMI for ';'
+   ------------------------- */
+
+mosq: mosq {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp Q>;
+};
+
+mosw: mosw {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp W>;
+};
+
+mosf: mosf {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp F>;
+};
+
+mosp: mosp {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp P>;
+};
+
+/* b : C-x then C-b */
+mosb: mosb {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp LC(B)>;
+};
+
+/* j/l -> C-c C-; <key> */
+mosj: mosj {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp J>;
+};
+
+mosl: mosl {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp L>;
+};
+
+mosu: mosu {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp U>;
+};
+
+mosy: mosy {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp Y>;
+};
+
+mos_sqt: mos_sqt {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp SQT>;
+};
+
+mosa: mosa {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp LC(SEMI)>;
+};
+
+mosr: mosr {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(G)>;
+};
+
+moss: moss {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp LC(F)>;
+};
+
+most: most {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp B>;
+};
+
+mosg: mosg {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp G>;
+};
+
+mosm: mosm {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp M>;
+};
+
+mosz: mosz {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LA(S)>, <&macro_tap &kp DOT>;
+};
+
+mosx: mosx {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    /* Ctrl+Alt+Shift+5  -> nested wrappers produce the same */
+    bindings = <&macro_tap &kp LC(LA(LS(5)))>;
+};
+
+mosc: mosc {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp C>;
+};
+
+mosd: mosd {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp D>;
+};
+
+mosv: mosv {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(C)>, <&macro_tap &kp LC(SEMI)>, <&macro_tap &kp V>;
+};
+
+mosk: mosk {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp K>;
+};
+
+mos_space: mos_space {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp TAB>;
+};
 
 just_code: just_code {
         compatible = "zmk,behavior-macro";
