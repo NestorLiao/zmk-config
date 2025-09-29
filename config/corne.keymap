@@ -123,8 +123,10 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-        = <&macro_tap     &kp LC(X)>
-          , <&macro_tap     &kp 0>;
+      = <&macro_press &kp RCTL>
+        , <&macro_tap &kp X>
+        , <&macro_tap &kp N0>
+        , <&macro_release &kp RCTL>
     };
 
     /* x -> C-x 1 */
@@ -132,8 +134,10 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-        = <&macro_tap     &kp LC(X)>
-          , <&macro_tap     &kp 1>;
+      = <&macro_press &kp RCTL>
+        , <&macro_tap &kp X>
+        , <&macro_tap &kp N1>
+        , <&macro_release &kp RCTL>
     };
 
     /* c -> C-x 2 */
@@ -141,8 +145,10 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-        = <&macro_tap     &kp LC(X)>
-          , <&macro_tap     &kp 2>;
+      = <&macro_press &kp RCTL>
+        , <&macro_tap &kp X>
+        , <&macro_tap &kp N2>
+        , <&macro_release &kp RCTL>
     };
 
     /* d -> C-x o */
@@ -341,7 +347,10 @@ mosr: mosr {
 moss: moss {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-    bindings = <&macro_tap &kp LC(X)>, <&macro_tap &kp LC(F)>;
+    bindings =
+          = <&macro_press &kp RCTL>
+        , <&macro_tap &kp G>
+        , <&macro_release &kp RCTL>
 };
 
 most: most {
@@ -372,7 +381,7 @@ mosx: mosx {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     /* Ctrl+Alt+Shift+5  -> nested wrappers produce the same */
-    bindings = <&macro_tap &kp LC(LA(LS(5)))>;
+    bindings = <&macro_tap &kp LC(LA(PRCNT))>;
 };
 
 mosc: mosc {
