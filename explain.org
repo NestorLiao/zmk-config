@@ -1,0 +1,61 @@
+# 与原生相合 (win)
+# 不冲突 (special prefix)
+# 合乎习惯 (stay base)
+# home row效率 (home row effiction)
+# general in os(browser, editor)
+
+* nav
+#+begin_verse
+(q[mark-sexp]w[mark-word]f[mark_defun]p[mark-whole-buffer]b[quick-sdcv-search-at-point])
+                (g[er/expand-region])(m[toggle-truncate-lines])
+(z[kill-current-buffer]x[delete-other-windows]c[split-window-below]d[switch_other]v[switch-to-buffer-other-window])
+(enter[previous-error]/delete[next-error])
+#+end_verse
+
+#+begin_verse
+(q[C-M-@]w[M-@]f[C-M-h]p[C-x h]b[c-c c-~ b])
+                (g[c-c c-~ g])(m[c-c c-~ m])
+(z[c-x 0]x[c-x 1]c[c-x 2]d[c-x o]v[c-c c-~ v])
+(enter[M-g p]/delete[M-g n])
+#+end_verse
+
+* num
+#+begin_verse
+(j[pause]/l[full]/u[down]/y[leftright]/'[open-app]/)
+(m[eink])
+(k[kill-win]/h[full]/,[down]/.[leftright]//[rotate])
+#+end_verse
+
+#+begin_verse
+(j[s-shift-j]/l[s-shift-l]/u[s-shift-u]/y[s-shift-y]/'[s-shift-'])
+(m[s-shift-m])
+(k[s-shift-k]/h[s-shift-h]/,[s-shift-s]/.[s-shift-.]//[s-shift-/])
+#+end_verse
+
+* mos
+#+begin_verse
+(q[gptel-menu]/w[consult-gh]/f[rg-dwim]/p[disproject-dispatch]/b[ibuffer])(j[font-lock-mode]/l[tldr]/u[delete-all-space]/y[global-hide-mode-line-mode]/'[vertico-flat-mode])
+(a[comment]/r[quit]/s[find-file]/t[consult-buffer]/g[magit-status])(m[man])
+(z[search-at-point]/x[query-replace-regexp]/c[disproject-compile]/d[dired]/v[multi-vterm-project])(k[kill-buffer])
+(space[indent-rigidly])
+#+end_verse
+
+#+begin_verse
+(q[c-c c-; q]/w[c-c c-; w]/f[c-c c-; f]/p[c-c c-; p]/b[c-x c-b])(j[c-c c-; j]/l[c-c c-; l]/u[c-c c-; u]/y[c-c c-; y]/'[c-c c-; '])
+(a[c-x c-;]/r[c-g]/s[c-x c-f]/t[c-x b]/g[c-x g])(m[c-c c-; m])
+(z[M-s .]/x[C-M-%]/c[c-c c-; c]/d[c-x d]/v[c-c c-; v])(k[c-x k])
+(space[C-X tab])
+#+end_verse
+
+* sym
+#+begin_verse
+(prompt1[just_give_me_he_code]/prompt2[explain_in_chinese]/prompt3[Think_longer]/prompt4[Search_The_Web]/prompt5[error_fix_it])
+(m[switch-to-gptel])
+(password/id/qq/email/phone)
+#+end_verse
+
+#+begin_verse
+(prompt1[just_give_me_he_code]/prompt2[explain_in_chinese]/prompt3[Think_longer]/prompt4[Search_The_Web]/prompt5[error_fix_it])
+(m[s-m])
+(password/id/qq/email/phone)
+#+end_verse
