@@ -341,16 +341,14 @@ mosa: mosa {
 mosr: mosr {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
-        bindings =
-      = <&macro_press &kp RCTRL>
+        bindings = <&macro_press &kp RCTRL>
         , <&macro_tap &kp G>
         , <&macro_release &kp RCTRL>;
 };
 
 moss: moss {
     compatible = "zmk,behavior-macro";
-    bindings =
-      = <&macro_press &kp RCTRL>
+    bindings = <&macro_press &kp RCTRL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp F>
         , <&macro_release &kp RCTRL>;
