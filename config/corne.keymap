@@ -126,7 +126,7 @@
       = <&macro_press &kp RCTL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp N0>
-        , <&macro_release &kp RCTL>
+        , <&macro_release &kp RCTL>;
     };
 
     /* x -> C-x 1 */
@@ -137,7 +137,7 @@
       = <&macro_press &kp RCTL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp N1>
-        , <&macro_release &kp RCTL>
+        , <&macro_release &kp RCTL>;
     };
 
     /* c -> C-x 2 */
@@ -148,7 +148,7 @@
       = <&macro_press &kp RCTL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp N2>
-        , <&macro_release &kp RCTL>
+        , <&macro_release &kp RCTL>;
     };
 
     /* d -> C-x o */
