@@ -123,10 +123,10 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-      = <&macro_press &kp RCTL>
+      = <&macro_press &kprep RCTRL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp N0>
-        , <&macro_release &kp RCTL>;
+        , <&macro_release &kp RCTRL>;
     };
 
     /* x -> C-x 1 */
@@ -134,10 +134,10 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-      = <&macro_press &kp RCTL>
+      = <&macro_press &kp RCTRL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp N1>
-        , <&macro_release &kp RCTL>;
+        , <&macro_release &kp RCTRL>;
     };
 
     /* c -> C-x 2 */
@@ -145,10 +145,10 @@
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         bindings
-      = <&macro_press &kp RCTL>
+      = <&macro_press &kp RCTRL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp N2>
-        , <&macro_release &kp RCTL>;
+        , <&macro_release &kp RCTRL>;
     };
 
     /* d -> C-x o */
@@ -348,9 +348,9 @@ moss: moss {
     compatible = "zmk,behavior-macro";
     #binding-cells = <0>;
     bindings =
-          = <&macro_press &kp RCTL>
+      = <&macro_press &kp RCTRL>
         , <&macro_tap &kp G>
-        , <&macro_release &kp RCTL>;
+        , <&macro_release &kp RCTRL>;
 };
 
 most: most {
