@@ -350,7 +350,7 @@ moss: moss {
     bindings =
           = <&macro_press &kp RCTL>
         , <&macro_tap &kp G>
-        , <&macro_release &kp RCTL>
+        , <&macro_release &kp RCTL>;
 };
 
 most: most {
