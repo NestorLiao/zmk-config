@@ -348,6 +348,7 @@ mosr: mosr {
 
 moss: moss {
     compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
     bindings = <&macro_press &kp RCTRL>
         , <&macro_tap &kp X>
         , <&macro_tap &kp F>
