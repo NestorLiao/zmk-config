@@ -588,7 +588,7 @@ pass: pass {
 // copy/down/up/fullscreen/toggle/ cduftabr
         Nav {
             bindings = <
-                &none   &navq        &navw        &navf        &navp        &navb        &navj    &kp navl   &navu    &navy    &navy_sqt  &none
+                &none   &navq        &navw        &navf        &navp        &navb        &navj    &navl   &navu    &navy    &navy_sqt  &none
                 &none   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT   &navg        &navm         &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &none
                 &none   &navz        &navx        &navc        &navd        &navv        &kp INSERT    &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &none
                                     &trans       &trans       &trans       &nav_enter       &nav_delete       &trans
