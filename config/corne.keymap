@@ -84,17 +84,54 @@
           , <&macro_tap     &kp LC(TILDE)>
           , <&macro_tap     &kp B>;
     };
-
-    /* redo = Ctrl+Shift+Z */
-    nav_redo: nav_redo {
+////////
+    navj: navj {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        bindings
+        /* w -> M-@ (Meta + @) */
         = <&macro_press   &kp LCTRL>
-          , <&macro_tap     &kp LS(Z)>
+          , <&macro_tap     &kp LA(J)>
           , <&macro_release &kp LCTRL>;
     };
 
+    navl: navl {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        /* w -> M-@ (Meta + @) */
+        = <&macro_press   &kp LCTRL>
+          , <&macro_tap     &kp LA(L)>
+          , <&macro_release &kp LCTRL>;
+    };
+
+    navu: navu {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        /* w -> M-@ (Meta + @) */
+        = <&macro_press   &kp LCTRL>
+          , <&macro_tap     &kp LA(U)>
+          , <&macro_release &kp LCTRL>;
+    };
+
+    navy: navy {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        /* w -> M-@ (Meta + @) */
+        = <&macro_press   &kp LCTRL>
+          , <&macro_tap     &kp LA(Y)>
+          , <&macro_release &kp LCTRL>;
+    };
+
+    nav_sqt: nav_sqt {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        /* w -> M-@ (Meta + @) */
+        = <&macro_press   &kp LCTRL>
+          , <&macro_tap     &kp LA(SQT)>
+          , <&macro_release &kp LCTRL>;
+    };
+
+
+/////
     /* g: C-c, C-~, then g */
     navg: navg {
         compatible = "zmk,behavior-macro";
@@ -551,7 +588,7 @@ pass: pass {
 // copy/down/up/fullscreen/toggle/ cduftabr
         Nav {
             bindings = <
-                &none   &navq        &navw        &navf        &navp        &navb        &nav_redo    &kp K_CUT   &kp K_COPY    &kp K_PASTE    &kp K_UNDO  &none
+                &none   &navq        &navw        &navf        &navp        &navb        &navj    &kp navl   &navu    &navy    &navy_sqt  &none
                 &none   &kp LGUI     &kp LALT     &kp LCTRL    &kp LSHIFT   &navg        &navm         &kp LEFT    &kp DOWN      &kp UP        &kp RIGHT   &none
                 &none   &navz        &navx        &navc        &navd        &navv        &kp INSERT    &kp HOME    &kp PG_DN     &kp PG_UP     &kp END     &none
                                     &trans       &trans       &trans       &nav_enter       &nav_delete       &trans
