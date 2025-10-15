@@ -88,46 +88,46 @@
     navj: navj {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* w -> M-@ (Meta + @) */
-        = <&macro_press   &kp LCTRL>
-          , <&macro_tap     &kp LA(J)>
-          , <&macro_release &kp LCTRL>;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp J>;
     };
 
     navl: navl {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* w -> M-@ (Meta + @) */
-        = <&macro_press   &kp LCTRL>
-          , <&macro_tap     &kp LA(L)>
-          , <&macro_release &kp LCTRL>;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp L>;
     };
 
     navu: navu {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* w -> M-@ (Meta + @) */
-        = <&macro_press   &kp LCTRL>
-          , <&macro_tap     &kp LA(U)>
-          , <&macro_release &kp LCTRL>;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp U>;
     };
 
     navy: navy {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* w -> M-@ (Meta + @) */
-        = <&macro_press   &kp LCTRL>
-          , <&macro_tap     &kp LA(Y)>
-          , <&macro_release &kp LCTRL>;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp Y>;
     };
 
     nav_sqt: nav_sqt {
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
-        /* w -> M-@ (Meta + @) */
-        = <&macro_press   &kp LCTRL>
-          , <&macro_tap     &kp LA(SQT)>
-          , <&macro_release &kp LCTRL>;
+        bindings
+        = <&macro_tap     &kp LC(C)>
+          , <&macro_tap     &kp LC(TILDE)>
+          , <&macro_tap     &kp SQT>;
     };
 
 
